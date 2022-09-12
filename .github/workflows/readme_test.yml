@@ -25,24 +25,3 @@ jobs:
         run: pip install pytest
       - name: Test with pytest
         run: pytest test_src
-
-      # - name: Markdown Embed Code From File
-      #   uses: tokusumi/markdown-embed-code@main
-      #   with:
-      #     markdown: "README.md"
-      # - name: Check modified
-      #   id: modified
-      #   run: if [[ $(git status --porcelain | wc -l) != "0" ]]; then exit 1; fi
-      #   continue-on-error: true
-      # - name: Commit files
-      #   if: steps.modified.outcome == 'failure'
-      #   run: |
-      #     git config --local user.email "action@github.com"
-      #     git config --local user.name "GitHub Action"
-      #     git commit -m "Embedding code into Markdown" -a
-      # - name: Push changes
-      #   if: steps.modified.outcome == 'failure'
-      #   uses: ad-m/github-push-action@master
-      #   with:
-      #     github_token: ${{ secrets.GITHUB_TOKEN }}
-      #     branch: ${{ github.head_ref }}
