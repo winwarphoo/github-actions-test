@@ -27,7 +27,7 @@ jobs:
         run: pytest test_src
 
       - name: Markdown Embed Code From File
-        uses: tokusumi/markdown-embed-code@master
+        uses: tokusumi/markdown-embed-code@main
         with:
           markdown: "README.md"
       - name: Check modified
